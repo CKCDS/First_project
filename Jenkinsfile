@@ -6,6 +6,7 @@ pipeline {
         retry(count: 1) {
           sh '''
           whereis python2.7
+          pip list
      
             
          
