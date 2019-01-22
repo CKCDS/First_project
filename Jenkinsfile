@@ -5,7 +5,7 @@ pipeline {
       steps {
         retry(count: 1) {
           sh '''
-   
+          whereis python2.7
      
             
          
