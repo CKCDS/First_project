@@ -4,12 +4,10 @@ pipeline {
     stage('Deliver') {
       steps {
         retry(count: 1) {
-          sh 
-          '''
+          sh '''
           if [ ! -d "venv" ]; then
                 virtualenv -p /usr/bin/python2.7 venv
-                BUILD_ID=DONTKILLME nohup python manage.py runserver 0.0.0.0:8000
-          '''
+                BUILD_ID=DONTKILLME nohup python manage.py runserver 0.0.0.0:8000'''
         }
 
       }
