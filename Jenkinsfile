@@ -6,7 +6,7 @@ pipeline {
         retry(count: 1) {
           sh '''
           if [ ! -d "venv" ]; then
-                virtualenv -p /usr/bin/python2.7 venv
+                virtualenv -p /usr/bin/python2.7 venv11
      
                 fi
            pip install PyMySQL
