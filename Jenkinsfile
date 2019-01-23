@@ -5,8 +5,10 @@ pipeline {
       steps {
         retry(count: 1) {
           sh '''
-          whereis python2.7
-          whereis pip
+   if [ ! -d "venv" ]; then    virtualenv -p /usr/bin/python2.7 venv
+   fi
+  . venv/bin/activate
+  pip install -i http://pypi.douban.com/simple -r requirements.txt
      
             
          
